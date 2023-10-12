@@ -12,9 +12,23 @@
   </ion-header>
 
   <div class="container">
-    <strong>Login</strong>
-    Username : <input type="text" [(ngModel)]="username" /> <br />
-    Password: <input type="password" [(ngModel)]="password" /> <br />
-    <ion-button (click)="checkLoginAuth"></ion-button>
+    <h1><strong>Login</strong></h1>
+    <ion-input
+      label="Username"
+      labelPlacement="floating"
+      fill="outline"
+      type="text"
+      [(ngModel)]="username"
+    />
+    <br />
+    <ion-input
+      label="Password"
+      labelPlacement="floating"
+      fill="outline"
+      type="password"
+      [(ngModel)]="password"
+    />
+    <br />
+    <ion-button (click)="checkLoginAuth()">Login</ion-button>
   </div>
 </ion-content>

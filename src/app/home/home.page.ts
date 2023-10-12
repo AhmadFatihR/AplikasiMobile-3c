@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  userRole: string = '';
   constructor() {}
 
+  ngOnInit() {
+    console.log(history.state);
+    this.userRole = history.state.userRole;
+  }
 }

@@ -18,11 +18,13 @@ export class LoginPage implements OnInit {
   }
 
   checkLoginAuth() {
-    if (this.username == 'superadmin' && this.password == '12345678') {
-      alert('anda dapat masuk');
-      this.router.navigate(['/home']);
+    if (this.username === 'superadmin' && this.password === '12345678') {
+      alert('Anda dapat masuk');
+      this.router.navigateByUrl('/home', { state: { userRole: 'superadmin' } });
+    } else if (this.username === 'admin' && this.password === '12345678') {
+      this.router.navigateByUrl('/home', { state: { userRole: 'admin' } });
     } else {
-      alert('Username atau Password Salah');
+      alert('Kredensial salah');
     }
   }
 }
